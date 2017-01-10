@@ -3,7 +3,7 @@
 
 全栈工程师
 ---
-http://www.ruanyifeng.com
+来源：http://www.ruanyifeng.com
 ## 技能
 	[JavaScript 全栈工程师培训教程](http://www.ruanyifeng.com/blog/2016/11/javascript.html)
 
@@ -11,7 +11,7 @@ http://www.ruanyifeng.com
 
 浏览器
 ---
-https://github.com/dwqs/blog
+来源：https://github.com/dwqs/blog
 ##	Chrome
 	[15个必须知道的Chrome开发者技巧](https://github.com/dwqs/blog/issues/29)
 	[九个Console命令，让js调试更简单](https://github.com/dwqs/blog/issues/32)
