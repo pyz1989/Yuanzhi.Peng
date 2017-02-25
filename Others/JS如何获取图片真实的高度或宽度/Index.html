@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>图片原始大小获取</title>
+</head>
+<body>
+	<img id="img" src="IMG_20170124_152231.jpg" width="600px">
+	<script type="text/javascript">
+		var img = document.createElement('img');
+		img.src = document.getElementById('img').src;
+		console.log('页面显示的宽度: ', document.getElementById('img').width, "; 高度: ", document.getElementById('img').height );
+		console.log('图片原始宽度: ', img.width, "; 高度: ", img.height );
+		
+		img.onload = function() {
+			alert(1);
+		};
+	</script>
+</body>
+</html>

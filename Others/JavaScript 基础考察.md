@@ -25,7 +25,7 @@ console.log(value);
 3、写出如下代码的输出内容
 ```
 function a() {
-    	 console.log(this);
+    console.log(this);
 }
 a.call(null); 
 ```

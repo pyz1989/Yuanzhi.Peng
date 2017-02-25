@@ -9,5 +9,3 @@
 	})(); 
 ```
 [when you can use console](http://caniuse.com/#search=console)
-
-> 对于块元素与内联元素是可以相互转换的，如将内联元素变成块级元素，可增加样式display:inline.同理将div变成内联元素可增加样式display:block;
