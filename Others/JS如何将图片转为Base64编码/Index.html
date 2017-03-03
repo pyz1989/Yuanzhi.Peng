@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS如何将图片转为Base64编码</title>
+</head>
+<body>
+<img id='demo'/>
+<canvas id="load-area"></canvas> 
+<script type="text/javascript">
+	var tmpImage = new Image();
+	tmpImage.src = "01.png";
+	var canvas = document.createElement('canvas');
+	canvas.height = tmpImage.height;
+	canvas.width = tmpImage.width;
+	var cxt = canvas.getContext("2d");
+	cxt.drawImage(tmpImage, 0, 0);
+	base64Str = "";
+	base64Str = canvas.toDataURL("image/png");
+	console.log(base64Str);
+	document.getElementById('demo').src = base64Str;
+</script>
+</body>
+</html>
