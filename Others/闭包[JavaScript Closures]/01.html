@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript闭包</title>
+	<script type="text/javascript">
+		function out() {
+			var i = 0;
+			function inner() {
+				alert(++i);
+			}
+			return inner;
+		}
+		var ref = out();
+		ref();
+	</script>
+</head>
+<body>
+
+</body>
+</html>

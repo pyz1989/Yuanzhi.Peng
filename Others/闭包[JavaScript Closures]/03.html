@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript闭包</title>
+	<style type="text/css">
+		div {
+			width: 50px; 
+			height: 50px;
+			background: lightcoral;
+			float: left;
+			margin: 20px;
+			font: 15px/50px "microsoft yahei";
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div>div-1</div>
+	<div>div-2</div>
+	<div>div-3</div>
+	<div>div-4</div>
+	<div>div-5</div>
+	<div>div-6</div>
+	<div>div-7</div>
+	<div>div-8</div>
+	<div>dvi-9</div>
+	<div>div-10</div>
+	<script type="text/javascript">
+		var divs = document.getElementsByTagName("div");
+		for (var i = 0;i < divs.length; i++) {
+			divs[i].onclick = function(n) {
+				return function() {
+					alert(n);					
+				}
+			}(i);
+		} 
+	</script>
+</body>
+</html>

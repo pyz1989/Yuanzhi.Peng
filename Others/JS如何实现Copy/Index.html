@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS如何实现Copy</title>
+</head>
+<body>
+	document.execCommand('cut'/'copy') 被拒绝，因为它不是从短时运行的用户生成的事件处理程序内部进行调用。
+	这是一个安全考虑，因为exeCommand()可以操作系统剪切板，有可能被恶意利用。所以你不能用JS“直接”调用execCommand('copy')，而需要放到某一个有用户出发的事件响应函数内
+	多视通：http://imgbase64.duoshitong.com/
+	<button class='js-btn'>复制</button>
+	<script type="text/javascript">
+		function Copy() {
+
+    	}
+    	document.querySelector('.js-btn').onclick = function() {
+			var textarea = document.createElement('textarea');
+			textarea.value = '我是待复制的文本内容...';
+			if (textarea.value == '') {
+				alert('没有要复制的内容！');
+				return false;
+			}
+			textarea.select();
+			document.execCommand("Copy"); // 执行浏览器复制命令
+    	}
+	</script>
+</body>
+</html>
