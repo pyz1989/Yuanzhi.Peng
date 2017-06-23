@@ -5,14 +5,38 @@
 	<title>JS如何实现Copy</title>
 </head>
 <body>
-	document.execCommand('cut'/'copy') 被拒绝，因为它不是从短时运行的用户生成的事件处理程序内部进行调用。
-	这是一个安全考虑，因为exeCommand()可以操作系统剪切板，有可能被恶意利用。所以你不能用JS“直接”调用execCommand('copy')，而需要放到某一个有用户出发的事件响应函数内
-	多视通：http://imgbase64.duoshitong.com/
-	<button class='js-btn'>复制</button>
-	<script type="text/javascript">
-		function Copy() {
+<input type='text' id='testInput' value="这是测试问题" onclick='copy(this)'>
 
-    	}
+
+<script>
+
+//onclick时触发的copy函数
+function copy(obj)
+{
+obj.select(); 
+document.execCommand("Copy");
+alert("已复制好");
+}
+
+//模拟点击
+var obj = document.getElementById("testInput");
+obj.click();
+
+</script>
+
+
+
+	<p>
+		document.execCommand('cut'/'copy') 被拒绝，因为它不是从短时运行的用户生成的事件处理程序内部进行调用。
+		这是一个安全考虑，因为exeCommand()可以操作系统剪切板，有可能被恶意利用。所以你不能用JS“直接”调用execCommand('copy')，而需要放到某一个有用户出发的事件响应函数内
+	</p>
+	
+	多视通：http://imgbase64.duoshitong.com/
+	<br />
+	<button class='js-btn'>复制</button>
+	
+	<span id='error' style='color:red;'> </span>
+	<script type="text/javascript">
     	document.querySelector('.js-btn').onclick = function() {
 			var textarea = document.createElement('textarea');
 			textarea.value = '我是待复制的文本内容...';
